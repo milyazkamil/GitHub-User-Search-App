@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier Prime", monospace, sans-serif;
+  letter-spacing: 1px;
+}
+
+:root {
+  --bg-color-dark: #141C2F;
+  --bg-color-light: #F4F7FF;
+  --black: rgb(0, 0, 0);
+  --white: rgb(247, 247, 247);
+  --dark-blue: #1F2A48;
+  --light-blue: #FEFEFE;
+  --followers: #F5F8FF;
+  --placeholder-color: rgb(217, 214, 214);
+  --blue: #0079FE;
+  --blue-hover: #0157b4;
+}
+
+#main {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color-dark);
+}
+#main > #sub-main {
+  width: 90vw;
+  max-width: 700px;
+}
+#main > #sub-main > #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+#main > #sub-main > #header > #logo {
+  color: var(--bg-color-light);
+}
+#main > #sub-main > #header > #logo.light {
+  color: var(--black) !important;
+}
+#main > #sub-main > #header > #dark-mode {
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#main > #sub-main > #header > #dark-mode > span {
+  margin-left: 10px;
+}
+#main > #sub-main > #header > #dark-mode.light {
+  color: var(--black) !important;
+}
+#main > #sub-main > #search-bar {
+  margin-bottom: 30px;
+  color: var(--white);
+  position: relative;
+}
+#main > #sub-main > #search-bar > span > svg {
+  fill: var(--bg-color-light);
+  margin-left: 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+#main > #sub-main > #search-bar > span > svg.light {
+  fill: var(--black) !important;
+}
+#main > #sub-main > #search-bar > #search-input {
+  color: var(--white);
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 25px 70px;
+  background-color: var(--dark-blue) !important;
+  width: 100%;
+  border: none;
+}
+#main > #sub-main > #search-bar > #search-input.light {
+  color: var(--black) !important;
+  background-color: var(--light-blue) !important;
+}
+#main > #sub-main > #search-bar > #search-input::-moz-placeholder {
+  color: var(--placeholder-color);
+}
+#main > #sub-main > #search-bar > #search-input::placeholder {
+  color: var(--placeholder-color);
+}
+#main > #sub-main > #search-bar > #search-input.light::-moz-placeholder {
+  color: var(--black) !important;
+}
+#main > #sub-main > #search-bar > #search-input.light::placeholder {
+  color: var(--black) !important;
+}
+#main > #sub-main > #search-bar > #search-button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+#main > #sub-main > #search-bar > #search-button:hover {
+  background-color: var(--blue-hover);
+}
+#main > #sub-main > #main-content {
+  padding: 20px 40px;
+  padding-top: 30px;
+  border-radius: 15px;
+}
+#main > #sub-main > #main-content > #user-profile > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#main > #sub-main > #main-content > #user-profile > div > #user-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+#main > #sub-main > #main-content > #user-profile > div > #name-container > h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#main > #sub-main > #main-content > #user-profile > div > #name-container > a {
+  display: block;
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: var(--blue);
+}
+#main > #sub-main > #main-content > #user-profile > div > #name-container > span {
+  font-size: 18px;
+}
+#main > #sub-main > #main-content > #followers {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-color-dark);
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#main > #sub-main > #main-content > #followers > div {
+  text-align: center;
+}
+#main > #sub-main > #main-content > #followers > div > h3 {
+  margin-bottom: 10px;
+}
+#main > #sub-main > #main-content > #followers > div > span {
+  font-size: 22px;
+}
+#main > #sub-main > #main-content > #followers.light {
+  background-color: var(--followers) !important;
+}
+#main > #sub-main > #main-content > #contact {
+  padding: 0 5px;
+}
+#main > #sub-main > #main-content > #contact > div {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+#main > #sub-main > #main-content > #contact > div > span {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+#main > #sub-main > #main-content > #contact > div > span > .contact-svg {
+  height: 1.4em;
+  width: 1.4em;
+  margin-right: 10px;
+  fill: var(--white);
+}
+#main > #sub-main > #main-content > #contact > div > span > .contact-svg.light {
+  fill: var(--dark-blue) !important;
+}
+#main > #sub-main > #main-content > #contact > div > span > a {
+  color: var(--blue);
+  text-decoration: none;
+}
+#main > #sub-main > .main-content.light {
+  background-color: var(--light-blue);
+  color: var(--black);
+}
+#main > #sub-main > .main-content.dark {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+#main.light {
+  background-color: var(--bg-color-light);
+}
+
+@media screen and (max-width: 650px) {
+  #main > #sub-main {
+    width: 95vw;
+  }
+  #main > #sub-main > #search-bar > span > svg {
+    margin-left: 10px;
+  }
+  #main > #sub-main > #search-bar > #search-input {
+    font-size: 18px;
+    padding: 25px 50px;
+  }
+  #main > #sub-main > #search-bar > #search-button {
+    padding: 10px 15px;
+  }
+  #main > #sub-main > #main-content {
+    padding: 20px;
+    padding-top: 30px;
+  }
+  #main > #sub-main > #main-content > #user-profile > div > #user-photo {
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+  }
+  #main > #sub-main > #main-content > #user-profile > div > #name-container > h2 {
+    font-size: 28px;
+  }
+  #main > #sub-main > #main-content > #user-profile > div > #name-container > a {
+    font-size: 16px;
+  }
+  #main > #sub-main > #main-content > #user-profile > div > #name-container > span {
+    font-size: 17px;
+  }
+  #main > #sub-main > #main-content > #followers {
+    padding: 20px;
+    font-size: 16px;
+  }
+  #main > #sub-main > #main-content > #followers > div > span {
+    font-size: 20px;
+  }
+  #main > #sub-main > #main-content > #contact > div {
+    flex-direction: column;
+    margin-bottom: 0px !important;
+  }
+  #main > #sub-main > #main-content > #contact > div > span {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 430px) {
+  #main > #sub-main > #search-bar > #search-button {
+    font-size: 16px;
+  }
+  #main > #sub-main > #search-bar > #search-input::-moz-placeholder {
+    font-size: 13px;
+  }
+  #main > #sub-main > #search-bar > #search-input::placeholder {
+    font-size: 13px;
+  }
+  #main > #sub-main > #main-content {
+    padding: 15px;
+    padding-top: 30px;
+  }
+  #main > #sub-main > #main-content > #user-profile > div > #user-photo {
+    width: 110px;
+    height: 110px;
+  }
+  #main > #sub-main > #main-content > #user-profile > div > #name-container > h2 {
+    font-size: 25px;
+  }
+  #main > #sub-main > #main-content > #followers {
+    padding: 20px;
+    font-size: 14px;
+  }
+  #main > #sub-main > #main-content > #contact > div > span {
+    margin-bottom: 15px;
+  }
+}/*# sourceMappingURL=index.css.map */
